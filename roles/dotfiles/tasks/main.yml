@@ -1,0 +1,11 @@
+- name: Copy templates
+  ansible.builtin.template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: sotiris
+    group: sotiris
+    mode: 0744
+  loop:
+    - { src: bspwmrc, dest: ~/.config/bspwm/bspwmrc }
+  tags:
+    - nginx

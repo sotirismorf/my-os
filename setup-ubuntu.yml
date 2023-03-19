@@ -1,0 +1,8 @@
+- name: Configure system
+  hosts: localhost
+  gather_facts: false
+  vars:
+    touchpad: DELL08E1:00 06CB:CD97 Touchpad
+  connection: local
+  roles:
+    - dotfiles
