@@ -4,6 +4,9 @@
   vars:
     os_name: arch
     touchpad: SynPS/2 Synaptics TouchPad
+    laptop_monitor: eDP1
+    wlan_interface: wlan0
+    ethernet_interface: eno1
   connection: local
   roles:
     - role: dotfiles
