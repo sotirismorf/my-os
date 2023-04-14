@@ -2,7 +2,9 @@
   hosts: localhost
   gather_facts: false
   vars:
+    os_name: arch
     touchpad: SynPS/2 Synaptics TouchPad
   connection: local
   roles:
-    - dotfiles
+    - role: dotfiles
+      tags: dotfiles

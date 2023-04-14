@@ -8,16 +8,16 @@ alias ls='ls --color=auto'
 alias lsd='ls --color=auto -alh'
 alias lsl='ls --color=auto -lh'
 
-alias htop='htop --tree'
-
 alias rp='. repoman'
-alias find-node-modules='find . -name 'node_modules' -prune'
+alias htop='htop --tree'
+alias find-node-modules='fd --no-ignore --prune node_modules'
 alias myip='curl ifconfig.co/'
 alias vim='nvim'
 alias todo='nvim ~/.local/share/todo'
 alias du='du -h'
 alias diff='diff --color=auto'
 alias k='kubectl'
+alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-{{ os_name }}.yml --check --diff --tags dotfiles'
 alias nvm-on='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
 # Git

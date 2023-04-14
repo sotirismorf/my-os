@@ -4,9 +4,10 @@
     dest: "{{ item.dest }}"
     owner: sotiris
     group: sotiris
-    mode: 0744
+    mode: "{{ item.mode }}"
   loop:
-    - { src: bspwmrc, dest: ~/.config/bspwm/bspwmrc }
+    - { src: bspwmrc, dest: ~/.config/bspwm/bspwmrc, mode: "0744" }
+    - { src: aliases, dest: ~/.config/shell/aliases, mode: "0644" }
 
 - name: Copy files
   ansible.builtin.copy:
@@ -14,6 +15,6 @@
     dest: "{{ item.dest }}"
     owner: sotiris
     group: sotiris
-    mode: 0775
+    mode: "{{ item.mode }}"
   loop:
-    - { src: repoman, dest: ~/.local/bin/repoman }
+    - { src: repoman, dest: ~/.local/bin/repoman, mode: "0775" }
