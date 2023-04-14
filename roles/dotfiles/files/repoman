@@ -1,0 +1,10 @@
+#!/bin/sh
+
+BASE_DIR=/home/sotiris/p
+
+REPO_DIR=$(find $BASE_DIR -name .git -type d -prune |
+xargs dirname |
+xargs realpath --relative-to $BASE_DIR |
+fzf --height=32 --layout=reverse)
+
+cd "$BASE_DIR/$REPO_DIR"
