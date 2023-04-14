@@ -18,3 +18,4 @@
     mode: "{{ item.mode }}"
   loop:
     - { src: repoman, dest: ~/.local/bin/repoman, mode: "0775" }
+    - { src: env, dest: ~/.config/shell/common, mode: "0644" }

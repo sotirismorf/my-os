@@ -19,6 +19,7 @@ alias diff='diff --color=auto'
 alias k='kubectl'
 alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-{{ os_name }}.yml --check --diff --tags dotfiles'
 alias nvm-on='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+alias paccache-last2='paccache -rk2'
 
 # Git
 alias lg='lazygit'
