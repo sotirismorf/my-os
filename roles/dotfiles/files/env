@@ -17,4 +17,4 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export CARGO_HOME="$HOME/.local/share/cargo"
 # export MOZ_ENABLE_WAYLAND=1
 
-source "~/.config/shell/aliases"
+source ~/.config/shell/aliases
