@@ -1,0 +1,25 @@
+import:
+  - ~/.config/alacritty/gruvbox_dark.yml
+
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 1.0
+  dimensions:
+    columns: 120
+    lines: 80
+
+font:
+  normal:
+    family: NotoSansMono Nerd Font
+  size: 8
+
+selection:
+  save_to_clipboard: true
+
+mouse:
+  hide_when_typing: false
+
+key_bindings:
+  - { key: N, mods: Control, action: SpawnNewInstance }
