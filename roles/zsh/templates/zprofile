@@ -1,0 +1,6 @@
+# source "$HOME/.config/shell/profile"
+
+export GDK_DPI_SCALE=1
+
+[ -f "$HOME/.config/shell/common" ] && source "$HOME/.config/shell/common"
+[ -f "$HOME/.config/shell/work" ] && source "$HOME/.config/shell/work"

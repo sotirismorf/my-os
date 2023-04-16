@@ -11,3 +11,7 @@
   roles:
     - role: dotfiles
       tags: dotfiles
+    - role: zsh
+      tags:
+        - dotfiles
+        - zsh
