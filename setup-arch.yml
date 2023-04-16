@@ -7,6 +7,8 @@
     laptop_monitor: eDP1
     wlan_interface: wlan0
     ethernet_interface: eno1
+    battery: BAT1
+    battery_adapter: ACAD
   connection: local
   roles:
     - role: dotfiles
