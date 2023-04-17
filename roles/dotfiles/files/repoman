@@ -1,9 +1,0 @@
-#!/bin/sh
-
-BASE_DIR=/home/sotiris/p
-
-REPO_DIR=$(fd --base-directory $BASE_DIR --prune --type directory --no-ignore --hidden ^.git$ |
-xargs dirname |
-fzf --height=32 --layout=reverse)
-
-[ -z "$REPO_DIR" ] || cd "$BASE_DIR/$REPO_DIR"

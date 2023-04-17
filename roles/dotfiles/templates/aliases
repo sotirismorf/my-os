@@ -10,7 +10,7 @@ alias lsl='ls --color=auto -lh'
 
 alias rp='. repoman'
 alias htop='htop --tree'
-alias find-node-modules='fd --no-ignore --prune node_modules'
+alias find-node-modules='{{ 'fdfind' if os_name == 'ubuntu' else 'fd' }} --no-ignore --prune node_modules'
 alias myip='curl ifconfig.co/'
 alias vim='nvim'
 alias todo='nvim ~/.local/share/todo'
