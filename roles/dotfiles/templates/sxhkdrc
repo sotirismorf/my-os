@@ -10,8 +10,6 @@ super + w
 super + e
 	thunar
 
-# program launcher
-#super + @space
 super + d
 	dmenu_run
 
@@ -25,11 +23,15 @@ super + Escape
 XF86Audio{Lower,Raise}Volume
 	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%
 
-# XF86MonBrightnessUp
-
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+{% if display_type == "LCD" %}
+# XF86MonBrightnessUp
+XF86MonBrightness{Down,Up}
+	xbacklight {-,+}10
+
+{% endif %}
 #
 # bspwm hotkeys
 #
@@ -75,16 +77,12 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-#super + {_,shift + }{h,j,k,l}
-#	bspc node -{f,s} {west,south,north,east}
+super + {_,ctrl + }{h,j,k,l}
+	bspc node --{focus,swap} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous window in the current desktop
-super + {j,k}
-	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -109,16 +107,12 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+super + shift + {h,j,k,l,space}
+	bspc node --presel-dir {west,south,north,east,cancel}
 
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space

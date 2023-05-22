@@ -2,6 +2,7 @@
   hosts: localhost
   gather_facts: false
   vars:
+    display_type: LCD
     os_name: arch
     touchpad: SynPS/2 Synaptics TouchPad
     laptop_monitor: eDP1
