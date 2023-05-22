@@ -41,6 +41,9 @@ xinput set-prop "{{ touchpad }}" "libinput Natural Scrolling Enabled" 1
 # Keyboard rate
 xset r rate 230 45
 
+# Fix cursor X on wallpaper
+xsetroot -cursor_name left_ptr &
+
 # ~/.local/bin/startup
 # ~/.config/polybar/launch.sh
 # flameshot &
