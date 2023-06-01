@@ -20,6 +20,8 @@ alias k='kubectl'
 alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-{{ os_name }}.yml --check --diff --tags dotfiles'
 alias nvm-on='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 alias paccache-last2='paccache -rk2'
+alias dr='docker run --rm -it --entrypoint sh'
+alias drb='docker run --rm -it --entrypoint bash'
 
 # Git
 alias lg='lazygit'
