@@ -7,7 +7,7 @@
     mode: "{{ item.mode }}"
   loop:
     - { src: bspwmrc, dest: ~/.config/bspwm/bspwmrc, mode: "0744" }
-    - { src: sxhkdrc, dest: ~/.config/sxhkd/sxhkdrc, mode: "0755" }
+    - { src: sxhkdrc, dest: ~/.config/sxhkd/sxhkdrc, mode: "0775" }
     - { src: aliases, dest: ~/.config/shell/aliases, mode: "0644" }
     - { src: polybar/config.ini, dest: ~/.config/polybar/config.ini, mode: "0644" }
     - { src: alacritty/alacritty.yml, dest: ~/.config/alacritty/alacritty.yml, mode: "0644" }
@@ -21,5 +21,5 @@
     group: sotiris
     mode: "{{ item.mode }}"
   loop:
-    - { src: env, dest: ~/.config/shell/common, mode: "0644" }
+    - { src: profile, dest: ~/.config/shell/profile, mode: "0644" }
     - { src: tmux.conf, dest: ~/.config/tmux/tmux.conf, mode: "0644" }

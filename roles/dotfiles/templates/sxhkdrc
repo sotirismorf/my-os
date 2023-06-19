@@ -7,8 +7,8 @@ super + w
 	firefox
 
 # file manager
-super + e
-	thunar
+# super + e
+# 	thunar
 
 super + d
 	dmenu_run

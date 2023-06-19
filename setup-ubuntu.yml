@@ -16,3 +16,5 @@
       tags: ubuntu
     - role: dotfiles
       tags: dotfiles
+    - role: zsh
+      tags: zsh

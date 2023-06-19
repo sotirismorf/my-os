@@ -1,29 +1,51 @@
 #!/bin/sh
 
+# Color output
+
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias ls='ls --color=auto'
+
 # File managing
+
 alias cp='cp -v'
+alias lsd='ls -alh'
+alias lsl='ls -lh'
 alias mv='mv -v'
 alias rm='rm -v'
-alias ls='ls --color=auto'
-alias lsd='ls --color=auto -alh'
-alias lsl='ls --color=auto -lh'
 
-alias rp='. repoman'
-alias htop='htop --tree'
-alias find-node-modules='{{ 'fdfind' if os_name == 'ubuntu' else 'fd' }} --no-ignore --prune node_modules'
-alias myip='curl ifconfig.co/'
-alias vim='nvim'
-alias todo='nvim ~/.local/share/todo'
-alias du='du -h'
-alias diff='diff --color=auto'
-alias k='kubectl'
-alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-{{ os_name }}.yml --check --diff --tags dotfiles'
-alias nvm-on='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
-alias paccache-last2='paccache -rk2'
+# Docker
+
 alias dr='docker run --rm -it --entrypoint sh'
 alias drb='docker run --rm -it --entrypoint bash'
 
 # Git
-alias lg='lazygit'
+
 alias gb='git branch'
 alias gc='git checkout'
+alias lg='lazygit'
+{% if os_name == "ubuntu" %}
+
+# Debian specific
+
+alias ansible-on="source $HOME/p/virtenvs/ansible-2.9/bin/activate"
+alias openstack-on="source $HOME/p/virtenvs/openstack/bin/activate"
+alias s3cmd-on="source $HOME/p/virtenvs/s3cmd/bin/activate"
+alias s3cmd="s3cmd -c $HOME/.config/s3/s3cmd.ini"
+{% endif %}
+
+# Other
+
+alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-ubuntu.yml --check --diff --tags dotfiles'
+alias du='du -h'
+alias find-node-modules='fdfind --no-ignore --prune node_modules'
+alias htop='htop --tree'
+alias i3lock='i3lock -t -i ~/Pictures/Wallpaper/gruvbox_linux_resized.png -p win'
+alias k='kubectl'
+alias myip='curl ifconfig.co/'
+alias nvm-on='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+alias paccache-last2='paccache -rk2'
+alias rp='. repoman'
+alias todo='nvim ~/.local/share/todo'
+alias vim='nvim'
