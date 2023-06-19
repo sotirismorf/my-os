@@ -29,15 +29,16 @@ alias lg='lazygit'
 
 # Debian specific
 
-alias ansible-on="source $HOME/p/virtenvs/ansible-2.9/bin/activate"
-alias openstack-on="source $HOME/p/virtenvs/openstack/bin/activate"
-alias s3cmd-on="source $HOME/p/virtenvs/s3cmd/bin/activate"
+alias ansible-on="source $HOME/p/venv/ansible-2.9/bin/activate"
+alias ansible-latest="source $HOME/p/venv/ansible-lint/bin/activate"
+alias openstack-on="source $HOME/p/venv/openstack/bin/activate"
+alias s3cmd-on="source $HOME/p/venv/s3cmd/bin/activate"
 alias s3cmd="s3cmd -c $HOME/.config/s3/s3cmd.ini"
 {% endif %}
 
 # Other
 
-alias dotfilediff='ansible-playbook ~/p/repos/my-os/setup-ubuntu.yml --check --diff --tags dotfiles'
+alias dotfilediff='ansible-playbook ~/p/repos/github/sotirismorf/my-os/setup-ubuntu.yml --check --diff --tags dotfiles'
 alias du='du -h'
 alias find-node-modules='fdfind --no-ignore --prune node_modules'
 alias htop='htop --tree'
