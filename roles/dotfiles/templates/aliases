@@ -25,6 +25,11 @@ alias drb='docker run --rm -it --entrypoint bash'
 alias gb='git branch'
 alias gc='git checkout'
 alias lg='lazygit'
+
+# Ansible
+
+alias ap='ansible-playbook'
+alias av='ansible-vault'
 {% if os_name == "ubuntu" %}
 
 # Debian specific
